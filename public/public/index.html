@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./resources/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&display=swap" rel="stylesheet">
+    <title>India Now...</title>
+  </head>
+  <body>
+ 
+
+    <header>
+      <div class="logo">
+        <img src="./resources/img/logo.png" alt="" />
+        <p>COVID-19<br />STATS</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="stats">
+        <div class="chart">
+          <div class="today">
+            <center>
+              <br>
+              <h2 style="color: white;">Today - Latest Update</h2>
+              <br>
+              <canvas id="donut_chart" max-height="300px"></canvas>
+            </center>
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="latest-report">
+          <div class="country">
+            <div class="name">Loading...</div>
+          </div>
+          <div class="total-cases">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+          </div>
+          <div class="recovered">
+            <div class="title">Recovered</div>
+            <div class="value">0</div>
+          </div>
+          <div class="deaths">
+            <div class="title">Deaths</div>
+            <div class="value">0</div>
+          </div>
+        </div>
+        <br>
+
+  
+        <div class="chart">
+          <canvas id="chart"></canvas>
+        </div>
+
+        <!-- heading for bar chart cases -->
+
+        <div class="chart-heading">
+          Last 14 days statistics
+        </div>
+        <nav>
+          <ul>
+            <li class="active" id="cases_tab"><a href="">Active cases</a></li>
+            <li><a href="" id="recovered_tab">Recovered</a></li>
+            <li><a href="" id="dead_tab">Dead</a></li>
+          </ul>
+        </nav>
+        
+        <div class="chart">
+          <canvas id="chart_second"></canvas>
+        </div>
+        
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    
+
+  <script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyCMRxOaSnssAKN5qozRZG-U4FC1drMigLs",
+    authDomain: "bingo-1d016.firebaseapp.com",
+    databaseURL: "https://bingo-1d016.firebaseio.com",
+    projectId: "bingo-1d016",
+    storageBucket: "bingo-1d016.appspot.com",
+    messagingSenderId: "166645970662",
+    appId: "1:166645970662:web:9a7333358d602467b3ad27",
+    measurementId: "G-D2CT46GNJV"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="resources/js/app.js"></script>
+  </body>
+</html>
