@@ -168,7 +168,7 @@ function updateStats() {
             label:"Today - Latest Update ",
             borderWidth:0,
             data:[deaths_list[last_date]-deaths_list[last_date-1],cases_list[last_date]-cases_list[last_date-1],recovered_list[last_date]-recovered_list[last_date-1]],
-            backgroundColor:["#f00","#00f","#0f0"]
+            backgroundColor:["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(86, 225, 86)"]
           }
         ]
       }
@@ -189,7 +189,6 @@ function axesLinearChart() {
   if (my_chart) {
     my_chart.destroy();
   }
-  document.getElementById("latest").innerHTML=formatDate(dates[dates.length-1])+ " - Latest Update";
   var ctx=document.getElementById("chart");
   my_chart = new Chart(ctx, {
     type: "line",

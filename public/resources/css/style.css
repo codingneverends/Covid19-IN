@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Alegreya', serif;
 }
 html{
     font-size: 16px;
@@ -47,7 +47,7 @@ header{
 }
 .logo p {
     font-weight: bold;
-    color: #af194f;
+    color: #6a149b;
 }
 main{
     max-width: 1200px;
@@ -65,7 +65,7 @@ main{
 
     width: 80%;
     margin: 0 auto;
-    padding-top: 10px;
+    padding-top: 50px;
 
     color: #FFF;
 }
@@ -79,7 +79,7 @@ main{
 
 .name{
     font-size: 2.2em;
-    color: #af194f;
+    color: #be64f1;
     font-weight: bold;
 }
 
@@ -112,13 +112,15 @@ main{
     margin: 0 auto;
     padding: 50px 0;
 }
+
 .chart-heading{
     font-size: 2.2em;
-    color:#af194f;
+    color:#be64f1;
     display :flex;
     justify-content: center;
-    text-align: center;
-    padding: 10px 0px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 nav {
@@ -165,6 +167,7 @@ nav {
     letter-spacing: 0.2em;
     font-size: 14px;
   }
+  
 @media screen and (max-width: 600px){
     .latest-report{
         display: flex;
