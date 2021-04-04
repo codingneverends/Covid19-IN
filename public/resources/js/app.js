@@ -55,6 +55,10 @@ function fetchData() {
           dates.push(entry.Date);
           cases_list.push(entry.Cases);
         });
+        const _date=new Date(dates[dates.length-1]);
+        const l_update=_date.toDateString().split(" ")[1]+" "+_date.toDateString().split(" ")[2];
+        console.log(l_update);
+        document.getElementById("l_update").innerText="Last Updated On - "+l_update;
         firebase.database().ref("Corona/data/dates").set(dates);
         firebase.database().ref("Corona/data/cases").set(cases_list);
       }).catch((e)=>{
@@ -68,7 +72,6 @@ function fetchData() {
           updateUI();
         });
       });
-
     await fetch(
       "https://api.covid19api.com/total/country/" +
         country +
